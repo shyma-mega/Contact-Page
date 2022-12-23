@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgb(20, 15, 15);
+}
+
+
+.contactcontainer {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contactcontainer h2 {
+    color: white;
+    margin-bottom: 80px;
+}
+
+.contactcontainer .boxes {
+    display: grid;
+    grid-template-columns: 250px 250px;
+}
+
+
+@media(max-width:787px) {
+    .contactcontainer .boxes {
+        grid-template-columns: 250px;
+    }
+}
+
+
+input {
+    background-color: transparent;
+    padding: 1em 2em;
+    border: none;
+    color: white;
+    border: 2px solid rgb(27, 44, 27);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    outline: none;
+}
+
+span {
+    position: relative;
+    right: 52px;
+    top: -29px;
+    color: gray;
+    transition: 0.5s ease;
+    -webkit-transition: 0.5s ease;
+    -moz-transition: 0.5s ease;
+    -ms-transition: 0.5s ease;
+    -o-transition: 0.5s ease;
+}
+
+input:valid~span,
+input:focus~span {
+    color: white;
+    position: relative;
+    top: -53px;
+    right: 80px;
+    padding: 2px 8px;
+    outline: none;
+    background-color: rgb(20, 15, 15);
+    font-size: 15px;
+    border-left: 1px solid green;
+    border-right: 1px solid green;
+}
+
+input:focus {
+    box-shadow: 0 0 20px green,
+        0 0 80px green;
+}
+
+textarea {
+    background-color: rgb(20, 15, 15);
+    border: 1px solid rgb(27, 44, 27);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    padding: 20px 30px;
+    color: gray;
+}
+
+button {
+    background-color: rgb(20, 15, 15);
+    border: none;
+    margin-top: 20px;
+    width: fit-content;
+
+}
+
+button input {
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+    cursor: pointer;
+}
+
+button input:hover {
+    color: rgb(27, 44, 27);
+    background-color: green;
+}
